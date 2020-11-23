@@ -63,3 +63,12 @@ Notes:
     - https://github.com/CloudDataObject/CDO/blob/master/CloudDataObject_Catalog.pdf
     - https://github.com/CloudDataObject/CDO
 
+## Comments
+
+I don't know who originally created this code, however this is the original source.
+
+https://community.progress.com/s/question/0D54Q00007qckt1SAA/sample-program-to-generate-an-openapi-spec-file-from-a-catalog-file
+
+I have placed the code here to allow for improved access and to permit changes to be tracked and disseminated appropriately.  
+
+Thank you to whoever created this resource, allowing developers to generate OpenAPI clients from Progress JSDO Catalogs.

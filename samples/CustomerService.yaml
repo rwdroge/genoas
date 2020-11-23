@@ -1,0 +1,177 @@
+openapi: 3.0.0
+info:
+  title: Data Service
+  description: OpenEdge Data Service.
+  version: 1.0.0
+servers:
+  - url: /rest/CustomerService
+paths:
+  /Customer:
+    put:
+      summary: Updates Customer records
+      description: Updates one or more `Customer` records.
+      parameters: []
+      requestBody:
+        description: Input parameter
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/dsCustomer'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/dsCustomer'
+    delete:
+      summary: Deletes Customer records
+      description: Deletes one or more `Customer` records.
+      parameters: []
+      requestBody:
+        description: Input parameter
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/dsCustomer'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/dsCustomer'
+    get:
+      summary: Gets Customer records
+      description: 'Gets one or more `Customer` records, based on a **filter** string.'
+      parameters:
+        - name: filter
+          in: query
+          description: 'filter string with JFP-formated query, ABL query or custom format.'
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/dsCustomer'
+    post:
+      summary: Creates Customer records
+      description: Creates one or more new `Customer` records.
+      parameters: []
+      requestBody:
+        description: Input parameter
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/dsCustomer'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/dsCustomer'
+  /Customer/count:
+    put:
+      summary: Invokes Operation
+      description: ''
+      parameters:
+        - name: filter
+          in: query
+          description: filter string with ABL query or custom format.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  response:
+                    type: object
+  /Customer/SubmitCustomer:
+    put:
+      summary: Submits multiple Customer updates
+      description: >-
+        Submits one or more updates (create, update, delete) in a single
+        request.
+      parameters: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  response:
+                    type: object
+components:
+  schemas:
+    dsCustomer:
+      type: object
+      properties:
+        dsCustomer:
+          properties:
+            ttCustomer:
+              $ref: '#/components/schemas/ttCustomerArray'
+    ttCustomer:
+      type: object
+      properties:
+        ttCustomer:
+          $ref: '#/components/schemas/ttCustomerArray'
+    ttCustomerArray:
+      type: array
+      items:
+        $ref: '#/components/schemas/ttCustomerItem'
+    ttCustomerItem:
+      type: object
+      properties:
+        CustNum:
+          type: integer
+        Country:
+          type: string
+        Name:
+          type: string
+        Address:
+          type: string
+        Address2:
+          type: string
+        City:
+          type: string
+        State:
+          type: string
+        PostalCode:
+          type: string
+        Contact:
+          type: string
+        Phone:
+          type: string
+        SalesRep:
+          type: string
+        CreditLimit:
+          type: number
+        Balance:
+          type: number
+        Terms:
+          type: string
+        Discount:
+          type: integer
+        Comments:
+          type: string
+        Fax:
+          type: string
+        EmailAddress:
+          type: string
+        id:
+          type: string
+        seq:
+          type: integer

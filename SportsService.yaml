@@ -1,0 +1,901 @@
+swagger: '2.0'
+info:
+  title: Data Service
+  description: OpenEdge Data Service.
+  version: 1.0.0
+host: oemobiledemo.progress.com
+basePath: /OEMobileDemoServices/rest/SportsService
+schemes:
+  - http
+paths:
+  /CustomerOrders:
+    post:
+      summary: Creates CustomerOrders records
+      description: Creates one or more new `CustomerOrders` records.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Input parameter
+          required: true
+          schema:
+            $ref: '#/definitions/CustomerOrders'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/CustomerOrders'
+    delete:
+      summary: Deletes CustomerOrders records
+      description: Deletes one or more `CustomerOrders` records.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Input parameter
+          required: true
+          schema:
+            $ref: '#/definitions/CustomerOrders'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/CustomerOrders'
+    get:
+      summary: Gets CustomerOrders records
+      description: 'Gets one or more `CustomerOrders` records, based on a **filter** string.'
+      consumes:
+        - application/json
+      parameters:
+        - name: filter
+          in: query
+          description: 'filter string with JFP-formated query, ABL query or custom format.'
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/CustomerOrders'
+    put:
+      summary: Updates CustomerOrders records
+      description: Updates one or more `CustomerOrders` records.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Input parameter
+          required: true
+          schema:
+            $ref: '#/definitions/CustomerOrders'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/CustomerOrders'
+  /CustomerOrders/GetttCust:
+    put:
+      summary: Invokes Operation
+      description: ''
+      consumes:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              response:
+                type: object
+  /CustomerOrders/countCustomers:
+    put:
+      summary: Invokes Operation
+      description: ''
+      consumes:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              response:
+                type: object
+  /CustomerOrders/SubmitCustomerOrders:
+    put:
+      summary: Submits multiple CustomerOrders updates
+      description: >-
+        Submits one or more updates (create, update, delete) in a single
+        request.
+      consumes:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              response:
+                type: object
+  /CustomerOrders/GetttOrd:
+    put:
+      summary: Invokes Operation
+      description: ''
+      consumes:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              response:
+                type: object
+  /CustomerOrders/countOrders:
+    put:
+      summary: Invokes Operation
+      description: ''
+      consumes:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              response:
+                type: object
+  /Item:
+    delete:
+      summary: Deletes Item records
+      description: Deletes one or more `Item` records.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Input parameter
+          required: true
+          schema:
+            $ref: '#/definitions/dsItem'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/dsItem'
+    put:
+      summary: Updates Item records
+      description: Updates one or more `Item` records.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Input parameter
+          required: true
+          schema:
+            $ref: '#/definitions/dsItem'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/dsItem'
+    post:
+      summary: Creates Item records
+      description: Creates one or more new `Item` records.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Input parameter
+          required: true
+          schema:
+            $ref: '#/definitions/dsItem'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/dsItem'
+    get:
+      summary: Gets Item records
+      description: 'Gets one or more `Item` records, based on a **filter** string.'
+      consumes:
+        - application/json
+      parameters:
+        - name: filter
+          in: query
+          description: filter string with ABL query or custom format.
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/dsItem'
+  /Item/SubmitItem:
+    put:
+      summary: Submits multiple Item updates
+      description: >-
+        Submits one or more updates (create, update, delete) in a single
+        request.
+      consumes:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              response:
+                type: object
+  /State:
+    post:
+      summary: Creates State records
+      description: Creates one or more new `State` records.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Input parameter
+          required: true
+          schema:
+            $ref: '#/definitions/dsState'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/dsState'
+    get:
+      summary: Gets State records
+      description: 'Gets one or more `State` records, based on a **filter** string.'
+      consumes:
+        - application/json
+      parameters:
+        - name: filter
+          in: query
+          description: filter string with ABL query or custom format.
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/dsState'
+    delete:
+      summary: Deletes State records
+      description: Deletes one or more `State` records.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Input parameter
+          required: true
+          schema:
+            $ref: '#/definitions/dsState'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/dsState'
+    put:
+      summary: Updates State records
+      description: Updates one or more `State` records.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Input parameter
+          required: true
+          schema:
+            $ref: '#/definitions/dsState'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/dsState'
+  /State/SubmitState:
+    put:
+      summary: Submits multiple State updates
+      description: >-
+        Submits one or more updates (create, update, delete) in a single
+        request.
+      consumes:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              response:
+                type: object
+  /Warehouse:
+    put:
+      summary: Updates Warehouse records
+      description: Updates one or more `Warehouse` records.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Input parameter
+          required: true
+          schema:
+            $ref: '#/definitions/dsWarehouse'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/dsWarehouse'
+    delete:
+      summary: Deletes Warehouse records
+      description: Deletes one or more `Warehouse` records.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Input parameter
+          required: true
+          schema:
+            $ref: '#/definitions/dsWarehouse'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/dsWarehouse'
+    get:
+      summary: Gets Warehouse records
+      description: 'Gets one or more `Warehouse` records, based on a **filter** string.'
+      consumes:
+        - application/json
+      parameters:
+        - name: filter
+          in: query
+          description: filter string with ABL query or custom format.
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/dsWarehouse'
+    post:
+      summary: Creates Warehouse records
+      description: Creates one or more new `Warehouse` records.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Input parameter
+          required: true
+          schema:
+            $ref: '#/definitions/dsWarehouse'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/dsWarehouse'
+  /Warehouse/SubmitWarehouse:
+    put:
+      summary: Submits multiple Warehouse updates
+      description: >-
+        Submits one or more updates (create, update, delete) in a single
+        request.
+      consumes:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              response:
+                type: object
+  /OrderOrderLine:
+    put:
+      summary: Updates OrderOrderLine records
+      description: Updates one or more `OrderOrderLine` records.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Input parameter
+          required: true
+          schema:
+            $ref: '#/definitions/dsOrderOrderLine'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/dsOrderOrderLine'
+    get:
+      summary: Gets OrderOrderLine records
+      description: 'Gets one or more `OrderOrderLine` records, based on a **filter** string.'
+      consumes:
+        - application/json
+      parameters:
+        - name: filter
+          in: query
+          description: filter string with ABL query or custom format.
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/dsOrderOrderLine'
+    post:
+      summary: Creates OrderOrderLine records
+      description: Creates one or more new `OrderOrderLine` records.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Input parameter
+          required: true
+          schema:
+            $ref: '#/definitions/dsOrderOrderLine'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/dsOrderOrderLine'
+    delete:
+      summary: Deletes OrderOrderLine records
+      description: Deletes one or more `OrderOrderLine` records.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Input parameter
+          required: true
+          schema:
+            $ref: '#/definitions/dsOrderOrderLine'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/dsOrderOrderLine'
+  /OrderOrderLine/MonthlySales:
+    put:
+      summary: Invokes Operation
+      description: ''
+      consumes:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              response:
+                type: object
+  /OrderOrderLine/GetttOrder:
+    put:
+      summary: Invokes Operation
+      description: ''
+      consumes:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              response:
+                type: object
+  /OrderOrderLine/SubmitOrderOrderLine:
+    put:
+      summary: Submits multiple OrderOrderLine updates
+      description: >-
+        Submits one or more updates (create, update, delete) in a single
+        request.
+      consumes:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              response:
+                type: object
+  /OrderOrderLine/GetttOrderLine:
+    put:
+      summary: Invokes Operation
+      description: ''
+      consumes:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              response:
+                type: object
+  /SalesRep:
+    delete:
+      summary: Deletes SalesRep records
+      description: Deletes one or more `SalesRep` records.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Input parameter
+          required: true
+          schema:
+            $ref: '#/definitions/dsSalesrep'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/dsSalesrep'
+    put:
+      summary: Updates SalesRep records
+      description: Updates one or more `SalesRep` records.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Input parameter
+          required: true
+          schema:
+            $ref: '#/definitions/dsSalesrep'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/dsSalesrep'
+    get:
+      summary: Gets SalesRep records
+      description: 'Gets one or more `SalesRep` records, based on a **filter** string.'
+      consumes:
+        - application/json
+      parameters:
+        - name: filter
+          in: query
+          description: filter string with ABL query or custom format.
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/dsSalesrep'
+    post:
+      summary: Creates SalesRep records
+      description: Creates one or more new `SalesRep` records.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Input parameter
+          required: true
+          schema:
+            $ref: '#/definitions/dsSalesrep'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/dsSalesrep'
+  /SalesRep/SubmitSalesRep:
+    put:
+      summary: Submits multiple SalesRep updates
+      description: >-
+        Submits one or more updates (create, update, delete) in a single
+        request.
+      consumes:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              response:
+                type: object
+  /SalesRep/count:
+    put:
+      summary: Count operation for SalesRep
+      description: ''
+      consumes:
+        - application/json
+      parameters:
+        - name: filter
+          in: query
+          description: filter string with ABL query or custom format.
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              response:
+                type: object
+definitions:
+  CustomerOrders:
+    type: object
+    properties:
+      CustomerOrders:
+        properties:
+          ttCustomer:
+            $ref: '#/definitions/ttCustomerArray'
+          ttOrder:
+            $ref: '#/definitions/ttOrderArray'
+  ttCustomer:
+    type: object
+    properties:
+      ttCustomer:
+        $ref: '#/definitions/ttCustomerArray'
+  ttCustomerArray:
+    type: array
+    items:
+      $ref: '#/definitions/ttCustomerItem'
+  ttCustomerItem:
+    type: object
+    properties:
+      CustNum:
+        type: integer
+      Name:
+        type: string
+      Address:
+        type: string
+      Phone:
+        type: string
+      SalesRep:
+        type: string
+      Balance:
+        type: number
+      State:
+        type: string
+      id:
+        type: string
+      seq:
+        type: integer
+  ttOrder:
+    type: object
+    properties:
+      ttOrder:
+        $ref: '#/definitions/ttOrderArray'
+  ttOrderArray:
+    type: array
+    items:
+      $ref: '#/definitions/ttOrderItem'
+  ttOrderItem:
+    type: object
+    properties:
+      SalesRep:
+        type: string
+      Ordernum:
+        type: integer
+      OrderDate:
+        type: string
+      BillToID:
+        type: integer
+      Carrier:
+        type: string
+      Creditcard:
+        type: string
+      CustNum:
+        type: integer
+      Instructions:
+        type: string
+      OrderStatus:
+        type: string
+      PO:
+        type: string
+      PromiseDate:
+        type: string
+      ShipDate:
+        type: string
+      ShipToID:
+        type: integer
+      Terms:
+        type: string
+      WarehouseNum:
+        type: integer
+  dsItem:
+    type: object
+    properties:
+      dsItem:
+        properties:
+          ttItem:
+            $ref: '#/definitions/ttItemArray'
+  ttItem:
+    type: object
+    properties:
+      ttItem:
+        $ref: '#/definitions/ttItemArray'
+  ttItemArray:
+    type: array
+    items:
+      $ref: '#/definitions/ttItemItem'
+  ttItemItem:
+    type: object
+    properties:
+      Itemnum:
+        type: integer
+      ItemName:
+        type: string
+      Price:
+        type: number
+      Onhand:
+        type: integer
+      Allocated:
+        type: integer
+      ReOrder:
+        type: integer
+      OnOrder:
+        type: integer
+      CatPage:
+        type: integer
+      CatDescription:
+        type: string
+      Category1:
+        type: string
+      Category2:
+        type: string
+      Special:
+        type: string
+      Weight:
+        type: number
+      Minqty:
+        type: integer
+  dsState:
+    type: object
+    properties:
+      dsState:
+        properties:
+          ttState:
+            $ref: '#/definitions/ttStateArray'
+  ttState:
+    type: object
+    properties:
+      ttState:
+        $ref: '#/definitions/ttStateArray'
+  ttStateArray:
+    type: array
+    items:
+      $ref: '#/definitions/ttStateItem'
+  ttStateItem:
+    type: object
+    properties:
+      State:
+        type: string
+      StateName:
+        type: string
+      Region:
+        type: string
+  dsWarehouse:
+    type: object
+    properties:
+      dsWarehouse:
+        properties:
+          ttWarehouse:
+            $ref: '#/definitions/ttWarehouseArray'
+  ttWarehouse:
+    type: object
+    properties:
+      ttWarehouse:
+        $ref: '#/definitions/ttWarehouseArray'
+  ttWarehouseArray:
+    type: array
+    items:
+      $ref: '#/definitions/ttWarehouseItem'
+  ttWarehouseItem:
+    type: object
+    properties:
+      WarehouseNum:
+        type: integer
+      WarehouseName:
+        type: string
+      Country:
+        type: string
+      Address:
+        type: string
+      Address2:
+        type: string
+      City:
+        type: string
+      State:
+        type: string
+      PostalCode:
+        type: string
+      Phone:
+        type: string
+  dsOrderOrderLine:
+    type: object
+    properties:
+      dsOrderOrderLine:
+        properties:
+          ttOrder:
+            $ref: '#/definitions/ttOrderArray'
+          ttOrderLine:
+            $ref: '#/definitions/ttOrderLineArray'
+  ttOrderLine:
+    type: object
+    properties:
+      ttOrderLine:
+        $ref: '#/definitions/ttOrderLineArray'
+  ttOrderLineArray:
+    type: array
+    items:
+      $ref: '#/definitions/ttOrderLineItem'
+  ttOrderLineItem:
+    type: object
+    properties:
+      Ordernum:
+        type: integer
+      Linenum:
+        type: integer
+      Itemnum:
+        type: integer
+      Discount:
+        type: integer
+      ExtendedPrice:
+        type: number
+      OrderLineStatus:
+        type: string
+      Price:
+        type: number
+      Qty:
+        type: integer
+  dsSalesrep:
+    type: object
+    properties:
+      dsSalesrep:
+        properties:
+          ttSalesrep:
+            $ref: '#/definitions/ttSalesrepArray'
+  ttSalesrep:
+    type: object
+    properties:
+      ttSalesrep:
+        $ref: '#/definitions/ttSalesrepArray'
+  ttSalesrepArray:
+    type: array
+    items:
+      $ref: '#/definitions/ttSalesrepItem'
+  ttSalesrepItem:
+    type: object
+    properties:
+      SalesRep:
+        type: string
+      RepName:
+        type: string
+      Region:
+        type: string
+      MonthQuota:
+        type: array
+        items:
+          type: integer
+      YearQuota:
+        type: integer
+      id:
+        type: string
+      seq:
+        type: integer

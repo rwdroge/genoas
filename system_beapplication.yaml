@@ -1,0 +1,93 @@
+openapi: 3.0.0
+info:
+  title: Data Service
+  description: OpenEdge Data Service.
+  version: 1.0.0
+servers:
+  - url: 'http://localhost:8810/web/data/<apikey>/system/beapplication'
+paths:
+  undefined:
+    post:
+      summary: Creates applications records
+      description: Creates one or more new `applications` records.
+      parameters: []
+      requestBody:
+        description: Input parameter
+        required: true
+        content: &ref_0
+          application/json:
+            schema:
+              $ref: '#/components/schemas/applications'
+      responses:
+        '200':
+          description: OK
+          content: *ref_0
+    get:
+      summary: Gets applications records
+      description: 'Gets one or more `applications` records, based on a **filter** string.'
+      parameters: []
+      requestBody:
+        description: Input parameter
+        required: true
+        content: &ref_1
+          application/json:
+            schema:
+              $ref: '#/components/schemas/applications'
+      responses:
+        '200':
+          description: OK
+          content: *ref_1
+    put:
+      summary: Updates applications records
+      description: Updates one or more `applications` records.
+      parameters: []
+      requestBody:
+        description: Input parameter
+        required: true
+        content: &ref_2
+          application/json:
+            schema:
+              $ref: '#/components/schemas/applications'
+      responses:
+        '200':
+          description: OK
+          content: *ref_2
+components:
+  schemas:
+    applications:
+      type: object
+      properties:
+        applications:
+          properties:
+            application:
+              $ref: '#/components/schemas/applicationArray'
+    application:
+      type: object
+      properties:
+        application:
+          $ref: '#/components/schemas/applicationArray'
+    applicationArray:
+      type: array
+      items:
+        $ref: '#/components/schemas/applicationItem'
+    applicationItem:
+      type: object
+      properties:
+        id:
+          type: string
+        seq:
+          type: integer
+        appcode:
+          type: string
+        applicationid:
+          type: string
+        apptoken:
+          type: string
+        dateend:
+          type: string
+        datestart:
+          type: string
+        description:
+          type: string
+        maxloginattempts:
+          type: integer

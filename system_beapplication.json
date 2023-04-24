@@ -1,0 +1,131 @@
+{
+  "version": "1.4",
+  "lastmodified": "2022-12-14T11:49:18.771+01:00",
+  "services": [
+    {
+      "address": "\/web\/data\/<apikey>\/system\/beapplication",
+      "name": "\/system\/beapplication",
+      "useRequest": true,
+      "resources": [
+        {
+          "schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "applications": {
+                "type": "object",
+                "abltype": "dataset",
+                "additionalproperties": false,
+                "properties": {
+                  "application": {
+                    "type": "array",
+                    "abltype": "temptable",
+                    "additionalproperties": false,
+                    "items": {
+                      "id": {
+                        "type": "string",
+                        "ablType": "character",
+                        "format": "x(8)",
+                        "default": ""
+                      },
+                      "seq": {
+                        "type": "integer",
+                        "ablType": "integer",
+                        "format": "->,>>>,>>9",
+                        "default": "0"
+                      },
+                      "appcode": {
+                        "type": "string",
+                        "ablType": "character",
+                        "format": "x(8)",
+                        "default": ""
+                      },
+                      "applicationid": {
+                        "type": "string",
+                        "ablType": "character",
+                        "format": "x(8)",
+                        "default": ""
+                      },
+                      "apptoken": {
+                        "type": "string",
+                        "ablType": "character",
+                        "format": "x(8)",
+                        "default": ""
+                      },
+                      "dateend": {
+                        "type": "string",
+                        "ablType": "datetime",
+                        "format": "yyyy-mm-ddThh:mm:ss",
+                        "default": ""
+                      },
+                      "datestart": {
+                        "type": "string",
+                        "ablType": "datetime",
+                        "format": "yyyy-mm-ddThh:mm:ss",
+                        "default": ""
+                      },
+                      "description": {
+                        "type": "string",
+                        "ablType": "character",
+                        "format": "x(8)",
+                        "default": ""
+                      },
+                      "maxloginattempts": {
+                        "type": "integer",
+                        "ablType": "integer",
+                        "format": "->,>>>,>>9",
+                        "default": "0"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "operations": [
+            {
+              "type": "create",
+              "verb": "post",
+              "params": [
+                {
+                  "name": "applications",
+                  "type": "REQUEST_BODY"
+                }
+              ]
+            },
+            {
+              "type": "read",
+              "verb": "get",
+              "params": [
+                {
+                  "name": "applications",
+                  "type": "REQUEST_BODY"
+                }
+              ]
+            },
+            {
+              "type": "update",
+              "verb": "put",
+              "params": [
+                {
+                  "name": "applications",
+                  "type": "REQUEST_BODY"
+                }
+              ]
+            },
+            {
+              "type": "delete",
+              "verb": "delete",
+              "params": [
+                {
+                  "name": "applications",
+                  "type": "REQUEST_BODY"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,263 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Data Service",
+        "description": "OpenEdge Data Service.",
+        "version": "1.0.0"
+    },
+    "basePath": "/rest/CustomerService",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/Customer": {
+            "put": {
+                "summary": "Updates Customer records",
+                "description": "Updates one or more `Customer` records.",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Input parameter",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dsCustomer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "$ref": "#/definitions/dsCustomer"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Deletes Customer records",
+                "description": "Deletes one or more `Customer` records.",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Input parameter",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dsCustomer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "$ref": "#/definitions/dsCustomer"
+                        }
+                    }
+                }
+            },
+            "get": {
+                "summary": "Gets Customer records",
+                "description": "Gets one or more `Customer` records, based on a **filter** string.",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "description": "filter string with JFP-formated query, ABL query or custom format.",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "$ref": "#/definitions/dsCustomer"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Creates Customer records",
+                "description": "Creates one or more new `Customer` records.",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Input parameter",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dsCustomer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "$ref": "#/definitions/dsCustomer"
+                        }
+                    }
+                }
+            }
+        },
+        "/Customer/count": {
+            "put": {
+                "summary": "Invokes Operation",
+                "description": "",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "description": "filter string with ABL query or custom format.",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "response": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Customer/SubmitCustomer": {
+            "put": {
+                "summary": "Submits multiple Customer updates",
+                "description": "Submits one or more updates (create, update, delete) in a single request.",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "response": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "dsCustomer": {
+            "type": "object",
+            "properties": {
+                "dsCustomer": {
+                    "properties": {
+                        "ttCustomer": {
+                            "$ref": "#/definitions/ttCustomerArray"
+                        }
+                    }
+                }
+            }
+        },
+        "ttCustomer": {
+            "type": "object",
+            "properties": {
+                "ttCustomer": {
+                    "$ref": "#/definitions/ttCustomerArray"
+                }
+            }
+        },
+        "ttCustomerArray": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/ttCustomerItem"
+            }
+        },
+        "ttCustomerItem": {
+            "type": "object",
+            "properties": {
+                "CustNum": {
+                    "type": "integer"
+                },
+                "Country": {
+                    "type": "string"
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "Address": {
+                    "type": "string"
+                },
+                "Address2": {
+                    "type": "string"
+                },
+                "City": {
+                    "type": "string"
+                },
+                "State": {
+                    "type": "string"
+                },
+                "PostalCode": {
+                    "type": "string"
+                },
+                "Contact": {
+                    "type": "string"
+                },
+                "Phone": {
+                    "type": "string"
+                },
+                "SalesRep": {
+                    "type": "string"
+                },
+                "CreditLimit": {
+                    "type": "number"
+                },
+                "Balance": {
+                    "type": "number"
+                },
+                "Terms": {
+                    "type": "string"
+                },
+                "Discount": {
+                    "type": "integer"
+                },
+                "Comments": {
+                    "type": "string"
+                },
+                "Fax": {
+                    "type": "string"
+                },
+                "EmailAddress": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "seq": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}
